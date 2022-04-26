@@ -41,6 +41,7 @@ img {
     --cor-1: #F7F7F7;
     --cor-6: #969696;
     --cor-8: #595959;
+    --cor-12: #000000;
 }
 
 .cor-0 {
@@ -69,8 +70,17 @@ img {
     font: 600 1.75rem/1.2 "Nunito";
 }
 
+.font-1-x-b-u {
+    font: 700 1.75rem/1.2 "Nunito";
+    text-transform: uppercase;
+}
+
 .font-1-l {
     font: 400 1.25rem/1.2 "Nunito";
+}
+
+.font-1-l-b {
+    font: 700 1.25rem/1.2 "Nunito";
 }
 
 .font-1-m {
@@ -165,6 +175,7 @@ img {
 /* Home - Produtos */
 .produtos {
     margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .produtos-conteudo {
@@ -198,6 +209,71 @@ img {
 
 .produtos-conteudo .blue::before {
     background: lightblue;
+}
+
+/*Home - Planos*/
+.planos-bg {
+    background: var(--cor-1);
+}
+
+.planos {
+    padding-top: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 40px;
+}
+
+.planos > div {
+    border: 4px solid var(--cor-0);
+    padding: 20px 40px;
+}
+
+.planos div h3 {
+    display: flex;
+    justify-content: center;
+}
+
+.planos div > span {
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: center;
+
+    border-top: 4px solid var(--cor-0);
+    border-bottom: 4px solid var(--cor-0);
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.planos div li:first-child {
+    margin-top: 20px;
+}
+
+.planos div li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.planos div li::after {
+    display: inline-block;
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 5px;
+    background: #2c70ff;
+}
+
+.planos div a {
+    margin-top: 20px;
+
+    display: block;
+    padding: 5px 20px;
+    border: 3px solid var(--cor-12);
 }
 
 
