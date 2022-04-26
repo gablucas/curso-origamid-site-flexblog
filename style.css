@@ -2,6 +2,7 @@
 body {
     font-family: 'Nunito';
     margin: 0px;
+    height: 2000px;
 }
 
 h1, h2, h3, p, ul {
@@ -18,10 +19,15 @@ ul {
     list-style: none;
 }
 
+img {
+    max-width: 100%;
+    display: block;
+}
+
 
 /* Utilidades - Componentes */
 .container {
-    max-width: 1240px;
+    max-width: 1000px;
     margin: 0 auto;
     /* padding-left: 40px; */
     /* padding-right: 40px; */
@@ -32,21 +38,39 @@ ul {
 /* Utilidades - Cores */
 :root {
     --cor-0: #FFFFFF;
+    --cor-1: #F7F7F7;
+    --cor-6: #969696;
+    --cor-8: #595959;
 }
 
 .cor-0 {
     color: var(--cor-0);
 }
 
+.cor-1 {
+    color: var(--cor-1);
+}
+
+.cor-6 {
+    color: var(--cor-6);
+}
+
+.cor-8 {
+    color: var(--cor-8);
+}
+
 
 /* Utilidades - Tipografias*/
-
 .font-1-xl {
     font: 700 2.5rem/1.1 "Nunito";
 }
 
 .font-1-x {
     font: 600 1.75rem/1.2 "Nunito";
+}
+
+.font-1-l {
+    font: 400 1.25rem/1.2 "Nunito";
 }
 
 .font-1-m {
@@ -110,25 +134,72 @@ ul {
     padding-top: 40px;
 }
 
-.main h1::after {
-    display: block;
+/* Home - Sobre */
 
+.sobre {
+    padding: 40px 0px;
+    margin-top: 40px;
+    border-top: 2px solid #2c70ff;
+    border-bottom: 2px solid #2c70ff;
+}
+
+.sobre-conteudo {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.sobre-texto {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.sobre-imagem {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+/* Home - Produtos */
+.produtos {
+    margin-top: 40px;
+}
+
+.produtos-conteudo {
+    display: flex;
+    gap: 20px;
+    align-items: flex-end;
+
+    margin-top: 40px;
+}
+
+.produtos-conteudo span {
+    display: block;
+    padding: 40px 20px;
+    background: var(--cor-1);
+}
+
+.produtos-conteudo .item::before {
     content: "";
     width: 100%;
-    height: 2px;
-    background: #2c70ff;
-    bottom: -40px;
-    margin-top: 40px;
+    height: 8px;
+    display: block;
 }
 
-.main-sobre {
-    margin-top: 40px;
-
-    display: flex;
+.produtos-conteudo .purple::before {
+    background: purple;
 }
 
-.main-sobre h2 {
-    flex-grow: 3;
+.produtos-conteudo .pink::before {
+    background: lightpink;
 }
+
+.produtos-conteudo .blue::before {
+    background: lightblue;
+}
+
+
 
 
