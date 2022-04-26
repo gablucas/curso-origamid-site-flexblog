@@ -2,10 +2,10 @@
 body {
     font-family: 'Nunito';
     margin: 0px;
-    height: 2000px;
+    height: 4000px;
 }
 
-h1, h2, h3, p, ul {
+h1, h2, h3, p, ul, input, button {
     margin: 0px;
     padding: 0px;
 }
@@ -23,7 +23,6 @@ img {
     max-width: 100%;
     display: block;
 }
-
 
 /* Utilidades - Componentes */
 .container {
@@ -90,7 +89,6 @@ img {
 .font-1-s {
     font: 500 .875rem/1.4 "Nunito";
 }
-
 
 /* Home - Header */
 .header-info-bg {
@@ -218,6 +216,7 @@ img {
 
 .planos {
     padding-top: 40px;
+    padding-bottom: 40px;
 
     display: flex;
     justify-content: center;
@@ -275,6 +274,91 @@ img {
     padding: 5px 20px;
     border: 3px solid var(--cor-12);
 }
+
+/* Home - Valores */
+.valores {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px 20px;
+}
+
+.valores div {
+    flex: 1 0 300px;
+    max-width: 25ch;
+}
+
+.valores div h2 {
+    display: flex;
+    align-items: center;
+}
+
+.valores div h2::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 24px;
+    margin-right: 10px;
+    background: #2c70ff;
+}
+
+.valores div h2.purple::before {
+    background-color: purple;
+}
+
+.valores div h2.pink::before {
+    background-color: lightpink;
+}
+
+.valores div h2.blue::before {
+    background-color: lightblue;
+}
+
+.valores div p {
+    margin-top: 10px;
+}
+
+/* Home - Newsletter */
+.newsletter-bg {
+    background: var(--cor-1);
+}
+
+.newsletter {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.newsletter div p {
+    max-width: 20ch;
+}
+
+.newsletter form {
+    display: flex;
+}
+
+.newsletter form input,
+.newsletter form button {
+    padding: 5px 10px;
+    border: 2px solid #2c70ff;
+}
+
+.newsletter form input {
+    flex: 1 0 200px;
+}
+
+.newsletter form button {
+    font: inherit;
+    background: #2c70ff;
+}
+
 
 
 
