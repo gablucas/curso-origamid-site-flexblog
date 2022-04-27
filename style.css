@@ -25,18 +25,18 @@ img {
 
 /* Utilidades - Componentes */
 .container {
-    max-width: 800px;
+    max-width: 960px;
     margin: 0 auto;
-    /* padding-left: 40px; */
-    /* padding-right: 40px; */
+    padding-left: 10px;
+    padding-right: 10px;
     box-sizing: border-box;
 }
 
 .container2 {
-    max-width: 1000px;
+    max-width: 1160px;
     margin: 0 auto;
-    /* padding-left: 40px; */
-    /* padding-right: 40px; */
+    padding-left: 10px;
+    padding-right: 10px;
     box-sizing: border-box;
 }
 
@@ -120,6 +120,7 @@ img {
 .header-info {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -132,10 +133,12 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .header-menu {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
 }
 
@@ -171,26 +174,27 @@ img {
     margin-top: 40px;
     border-top: 2px solid #2c70ff;
     border-bottom: 2px solid #2c70ff;
-}
 
-.sobre-conteudo {
     display: flex;
+    flex-wrap: wrap;
     gap: 40px;
-    margin-top: 40px;
 }
 
 .sobre-texto {
+    flex: 1 1 300px;
+
     display: flex;
-    flex: 1;
     flex-direction: column;
     gap: 40px;
 }
 
-.sobre-imagem {
+.sobre-imagens {
     display: flex;
-    align-items: flex-start;
+    flex-wrap: wrap;
+    align-items: start;
     gap: 10px;
 }
+
 
 /* Home - Produtos */
 .produtos {
@@ -200,10 +204,15 @@ img {
 
 .produtos-conteudo {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     align-items: flex-end;
 
     margin-top: 40px;
+}
+
+.produtos-conteudo .item {
+    flex: 1 1 200px;
 }
 
 .produtos-conteudo span {
@@ -212,23 +221,17 @@ img {
     background: var(--cor-1);
 }
 
-.produtos-conteudo .item::before {
-    content: "";
-    width: 100%;
-    height: 8px;
-    display: block;
+.produtos-conteudo .purple {
+    border-top: 8px solid #2596be;
+    
 }
 
-.produtos-conteudo .purple::before {
-    background: #2596be;
+.produtos-conteudo .pink {
+    border-top: 8px solid #ff245c;
 }
 
-.produtos-conteudo .pink::before {
-    background: #ff245c;
-}
-
-.produtos-conteudo .blue::before {
-    background: #68dcec;
+.produtos-conteudo .blue {
+    border-top: 8px solid #68dcec;
 }
 
 /*Home - Planos*/
@@ -241,6 +244,7 @@ img {
     padding-bottom: 40px;
 
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: flex-end;
     gap: 40px;
@@ -260,14 +264,14 @@ img {
 .planos div > span {
     margin-top: 20px;
 
-    display: flex;
-    justify-content: center;
+    display: block;
+    text-align: center;
 
     border-top: 4px solid var(--cor-0);
     border-bottom: 4px solid var(--cor-0);
 
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
 }
 
 .planos div li:first-child {
@@ -284,9 +288,9 @@ img {
 .planos div li::after {
     display: inline-block;
     content: "";
-    width: 4px;
-    height: 4px;
-    border-radius: 5px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
     background: #2c70ff;
 }
 
@@ -311,8 +315,7 @@ img {
 }
 
 .valores div {
-    flex: 1 0 300px;
-    max-width: 25ch;
+    flex: 1 1 300px;
 }
 
 .valores div h2 {
@@ -329,15 +332,15 @@ img {
     background: #2c70ff;
 }
 
-.valores div h2.purple::before {
+.valores div:nth-child(3n + 1) h2::before {
     background-color: #2596be;
 }
 
-.valores div h2.pink::before {
+.valores div:nth-child(3n + 2) h2::before {
     background-color: #ff245c;
 }
 
-.valores div h2.blue::before {
+.valores div:nth-child(3n + 3) h2::before {
     background-color: #68dcec;
 }
 
@@ -355,6 +358,7 @@ img {
     padding-bottom: 40px;
     
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 40px;
@@ -372,19 +376,22 @@ img {
     flex: 2;
 
     display: flex;
+    flex-wrap: wrap;
 }
 
 .newsletter-formulario input {
     flex: 4;
     padding: 5px 10px;
+    font-family: "Nunito";
     border: 2px solid #2c70ff;
+    background: transparent;
     outline: none;
 }
 
 .newsletter-formulario button {
     flex: 1;
     padding: 5px 20px;
-    border: 2px solid #2c70ff;
+    border: 0px;
     background: #2c70ff;
 
     cursor: pointer;
